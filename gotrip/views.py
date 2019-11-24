@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import City
 from .models import Festa
+from .models import Insta
 
 # Create your views here.
 def home(request):
@@ -18,4 +19,5 @@ def generic(request, city_name):
 
 def gallery(request, festa_id):
     festa_detail = get_object_or_404(Festa, pk = festa_id)
-    return render(request, 'gallery.html', {'festa': festa_detail})
+    instas = Insta.objects.filter(tag = festa_detail.id)
+    return render(request, 'gallery.html', {'festa': festa_detail , 'instas' : instas})

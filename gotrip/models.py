@@ -22,3 +22,12 @@ class Festa(models.Model):
 
     def cont(self):
         return self.content
+
+ 
+class Insta(models.Model):
+    title =  models.CharField(max_length= 200)
+    tag = models.CharField(max_length= 200)
+    img = models.CharField(max_length=200)
+    
+    def __str__(self):
+        return self.title

@@ -1,0 +1,16 @@
+{% load static %}
+<html>
+	<head>
+		<title>Go trip</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static './gotrip/css/main.css' %}">
+    </head>
+    <body>
+        {% for city in citys.all %}
+        <h1> {{city.title}} {{city.id}}</h1>
+        <a href="{% url 'generic' city.title %}"><img src="{% static city.img %}" alt="" title="This right here is a caption." onclick="goto()"></a> <center><h3>#{{city.title}}</h3></center> /></a>
+        <br>
+        {% endfor %}
+    </body>
+</html>

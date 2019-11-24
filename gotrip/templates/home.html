@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Snapshot by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Go trip</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static './gotrip/css/main.css' %}">
+	</head>
+	<body>
+        <body>
+            <div class="page-wrap">
+    
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html" class="active"><span class="icon fa-home"></span></a></li>
+                            <li><a href="generic.html"><span class="icon fa-file-text-o"></span></a></li>
+                            <li><a href="gallery.html"><span class="icon fa-camera-retro"></span></a></li>
+                        </ul>
+                    </nav>
+    
+                <!-- Main -->
+                    <section id="main">
+    
+                        <!-- Banner -->
+                            <section id="banner">
+                                <div class="inner">
+                                    <h1>Go Trip</h1>
+                                    <p> 최근 인기 여행지를 손쉽게 찾고 여행가자~!</p>
+                                    <ul class="actions">
+                                        <li><a href="#galleries" class="button alt scrolly big">Continue</a></li>
+                                    </ul>
+                                </div>
+                            </section>
+    
+                        <!-- Gallery -->
+                            <section id="galleries">
+    
+                                <!-- Photo Galleries -->
+                                    <div class="gallery">
+                                        <header class="special">
+                                            <h2>Local</h2>
+                                        </header>
+                                        <div class="content">
+                                            {% for city in citys.all %}
+                                            <div class="media">
+                                            <a href="{% url 'generic' city.title %}"><img src="{% static city.img %}" alt="" title="This right here is a caption." onclick="goto()">  </a>
+                                            <center><h3>#{{city.title}}</h3></center>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                        <footer>
+                                            <a href="gallery.html" class="button big"> Down조 </a>
+                                        </footer>
+                                    </div>
+                            </section>
+    
+                    
+                    </section>
+            </div>
+    
+            <!-- Scripts -->
+                <script src="{% static './gotrip/js/jquery.min.js'%}"></script>
+                <script src="{% static './gotrip/js/jquery.poptrox.min.js'%}"></script>
+                <script src="{% static './gotrip/js/jquery.scrolly.min.js'%}"></script>
+                <script src="{% static './gotrip/js/skel.min.js'%}"></script>
+                <script src="{% static './gotrip/js/util.js'%}"></script>
+                <script src="..assets/js{% static './gotrip/js/main.js'%}"></script>
+    
+        </body>
+    </html>

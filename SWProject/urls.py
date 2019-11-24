@@ -18,8 +18,8 @@ from django.urls import path
 import gotrip.views
 
 urlpatterns = [
-    path('', gotrip.views.example, name = 'example'),
-    path('home/', gotrip.views.home, name = 'home'),
+    path('example/', gotrip.views.example, name = 'example'),
+    path('', gotrip.views.home, name = 'home'),
     path('generic/<city_name>', gotrip.views.generic, name = 'generic'),
     path('admin/', admin.site.urls)
 ]

@@ -18,8 +18,9 @@ from django.urls import path
 import gotrip.views
 
 urlpatterns = [
-    path('example/', gotrip.views.example, name = 'example'),
     path('', gotrip.views.home, name = 'home'),
+    path('example/', gotrip.views.example, name = 'example'),
+    path('gallery/<int:festa_id>', gotrip.views.gallery, name = 'gallery'),
     path('generic/<city_name>', gotrip.views.generic, name = 'generic'),
     path('admin/', admin.site.urls)
 ]

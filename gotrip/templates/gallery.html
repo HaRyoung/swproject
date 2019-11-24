@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Snapshot by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Gallery - Snapshot by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static './gotrip/css/main.css' %}" />
+	</head>
+	<body>
+		<div class="page-wrap">
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'home' %}"><span class="icon fa-home"></span></a></li>
+						<li><a href="{% url 'home' %}"><span class="icon fa-file-text-o"></span></a></li>						
+						<li><a href="{% url 'home' %}" class="active"><span class="icon fa-camera-retro"></span></a></li>
+
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<section id="main">
+
+					<!-- Header -->
+						<header id="header">
+                            <div><center><h3><font face='나눔고딕'># {{festa.title}}</font></h3></center></div>
+						</header>
+
+					<!-- Gallery -->
+						<section id="galleries">
+
+							<!-- Photo Galleries -->
+								<div class="gallery">
+
+									<!-- Filters -->
+										<header>
+                                            <h3><font face='나눔고딕'>Information</font></h3>
+                                            <div id="pic">
+											<a href=""><img src="{% static festa.img %}" alt="" title="This right here is a caption."  width=70% height=50%/></a>
+                                                
+									<div class="social column">
+                                        <h3><font face='나눔고딕'></font>#{{festa.title}}</h3>
+                                        <font face='나눔고딕'>
+                                            <p>{{festa.content}}</p>
+                                        </font>
+								</div>
+										  </div>
+										</header>
+										</div>
+							
+						</section>
+
+					<!-- Contact -->
+						<section id="contact">
+				
+                            <table>
+                                <tr><td><img src="{% static './gotrip/images/thumbs/insta.png' %}" width=30%></td></tr>
+                            </table>
+                        <!-- Insta -->
+						<section id="galleries">
+
+							<!-- Insta Photo -->
+								<div class="gallery1">
+                                    <div class="content1">
+										<div class="media">
+											<a href="generic.html"><img src="images/thumbs/서울.jpg" alt="" /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/05.jpg"><img src="images/thumbs/경기.jpg" alt="" /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/09.jpg"><img src="images/thumbs/춘천.jpg" alt="" /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/02.jpg"><img src="images/thumbs/속초.jpg" alt="" /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/06.jpg"><img src="images/thumbs/부산.jpg" alt="" /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/10.jpg"><img src="images/thumbs/제주.jpg" alt="" /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/03.jpg"><img src="images/thumbs/가평.jpg" alt=""  /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/07.jpg"><img src="images/thumbs/진도.jpg" alt=""  /></a>
+										</div>
+									</div>
+                                    
+									<footer>
+										
+									</footer>
+								</div>
+						</section>
+
+                            
+                            
+                            
+                            
+						</section>
+
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

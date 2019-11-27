@@ -19,5 +19,9 @@ def generic(request, city_name):
 
 def gallery(request, festa_id):
     festa_detail = get_object_or_404(Festa, pk = festa_id)
-    instas = Insta.objects.filter(tag = festa_detail.id)
-    return render(request, 'gallery.html', {'festa': festa_detail , 'instas' : instas})
+    #instas = Insta.objects.filter(tag = festa_detail.id)
+    result1 = Insta.objects.all()[:3]
+    result2 = Insta.objects.all()[3:6]
+    result3 = Insta.objects.all()[6:9]
+    
+    return render(request, 'gallery.html', {'festa': festa_detail , 'instas1' : result1, 'instas2' : result2, 'instas3' : result3})

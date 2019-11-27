@@ -66,12 +66,38 @@
 
 							<!-- Insta Photo -->
 								<div class="gallery1">
-                                    <div class="content1">
-										{% for insta in instas.all %}
-										<div class="media">
-												<a href=""><img src="{% static insta.img %}" alt="" /></a>
-										</div>
-										{% endfor %}
+                                    <div class="feed">
+										<table>
+											<tbody>
+												<tr>
+													{% for insta in instas1.all %}
+													<td>
+													<div class="media">
+															<a href=""><img src="{% static insta.img %}" alt="" /></a>
+													</div>
+													</td>
+													{% endfor %}
+												</tr>
+												<tr>
+													{% for insta in instas2.all %}
+													<td>
+													<div class="media">
+															<a href=""><img src="{% static insta.img %}" alt="" /></a>
+													</div>
+													</td>
+													{% endfor %}
+												</tr>
+												<tr>
+													{% for insta in instas3.all %}
+													<td>
+													<div class="media">
+															<a href=""><img src="{% static insta.img %}" alt="" /></a>
+													</div>
+													</td>
+													{% endfor %}
+												</tr>
+											</tbody>
+										</table>
 									</div>
                                     
 									<footer>

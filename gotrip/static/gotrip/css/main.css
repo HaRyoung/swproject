@@ -897,7 +897,10 @@
                     }
 /*////////////////////////////////////////////////////////////*/
 				
-
+.gallery1 .feed table{
+	margin-left: auto;
+	margin-right: auto;
+}
 .gallery1 .content1 {
 			display: -ms-flexbox;
 			display: -moz-flex;
@@ -1541,7 +1544,7 @@
 		height: 75vh;
 		position: relative;
 		background: #000;
-		background-image: url(../../images/banner.jpg);
+		background-image: url(../images/banner.jpg);
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
@@ -1667,7 +1670,7 @@
 		height: 10vh;
 		position: relative;
 		background: #000;
-		background-image: url(../../images/banner.jpg);
+		background-image: url(../images/banner.jpg);
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: no-repeat;

@@ -67,10 +67,10 @@
 							<!-- Insta Photo -->
 								<div class="gallery1">
                                     <div class="feed">
-										<table>
+										<table style = "margin-left: auto; margin-right: auto;">
 											<tbody>
 												<tr>
-													{% for insta in instas1.all %}
+													{% for insta in instas1 %}
 													<td>
 													<div class="media">
 															<a href=""><img src="{% static insta.img %}" alt="" /></a>
@@ -79,7 +79,7 @@
 													{% endfor %}
 												</tr>
 												<tr>
-													{% for insta in instas2.all %}
+													{% for insta in instas2 %}
 													<td>
 													<div class="media">
 															<a href=""><img src="{% static insta.img %}" alt="" /></a>
@@ -88,7 +88,7 @@
 													{% endfor %}
 												</tr>
 												<tr>
-													{% for insta in instas3.all %}
+													{% for insta in instas3 %}
 													<td>
 													<div class="media">
 															<a href=""><img src="{% static insta.img %}" alt="" /></a>

@@ -21,7 +21,6 @@
 						<li><a href="{% url 'home' %}"><span class="icon fa-home"></span></a></li>
 						<li><a href="{% url 'home' %}"><span class="icon fa-file-text-o"></span></a></li>						
 						<li><a href="{% url 'home' %}" class="active"><span class="icon fa-camera-retro"></span></a></li>
-
 					</ul>
 				</nav>
 
@@ -43,7 +42,7 @@
 										<header>
                                             <h3><font face='나눔고딕'>Information</font></h3>
                                             <div id="pic">
-											<a href=""><img src="{% static festa.img %}" alt="" title="This right here is a caption." /></a>
+											<img src="{% static festa.img %}" alt="" title="This right here is a caption." /></a>
                                                 
 									<div class="social column">
                                         <h3><font face='나눔고딕'></font>#{{festa.title}}</h3>
@@ -56,55 +55,43 @@
 										</div>
 							
 						</section>
-						<section id="contact">
-				
-                            <table>
-                                <tr><td><img src="{% static './gotrip/images/thumbs/insta.png' %}" width=30%></td></tr>
-                            </table>
-                        <!-- Insta -->
-						<section id="galleries">
 
-							<!-- Insta Photo -->
-								<div class="gallery1">
-                                    <div class="feed">
-										<table>
-											<tbody>
-												<tr>
-													{% for insta in instas1 %}
-													<td>
-													<div class="media">
-															<a href=""><img src="{% static insta.img %}" alt="" /></a>
-													</div>
-													</td>
-													{% endfor %}
-												</tr>
-												<tr>
-													{% for insta in instas2 %}
-													<td>
-													<div class="media">
-															<a href=""><img src="{% static insta.img %}" alt="" /></a>
-													</div>
-													</td>
-													{% endfor %}
-												</tr>
-												<tr>
-													{% for insta in instas3 %}
-													<td>
-													<div class="media">
-															<a href=""><img src="{% static insta.img %}" alt="" /></a>
-													</div>
-													</td>
-													{% endfor %}
-												</tr>
-											</tbody>
-										</table>
-									</div>
-                                    
-									<footer>
-										
-									</footer>
-								</div>
-						</section>
+						<section id="contact">
+							<div class = "feed">
+                            <table >
+								<tr class = "aa"><td colspan="3"><img src="{% static './gotrip/images/thumbs/insta.png' %}" ></td><td>&nbsp;</td> <td>&nbsp;</td></tr>
+								<tbody>
+									<tr>
+										{% for insta in instas1 %}
+										<td>
+											<div class="media">
+												<img src="{% static insta.img %}" alt="" /></a>
+											</div>
+										</td>
+										{% endfor %}
+									</tr>
+									<tr>
+										{% for insta in instas2 %}
+										<td>
+											<div class="media">
+												<img src="{% static insta.img %}" alt="" /></a>
+											</div>
+										</td>
+										{% endfor %}
+									</tr>
+									<tr>
+										{% for insta in instas3 %}
+										<td>
+											<div class="media">
+												<img src="{% static insta.img %}" alt="" /></a>
+											</div>
+										</td>
+										{% endfor %}
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
 				</section>
 		</div>
 

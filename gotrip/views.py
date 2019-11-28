@@ -23,6 +23,7 @@ def gallery(request, festa_id):
     result1 = [];
     result2 = [];
     result3 = [];
+    
     for i in range(0,3) :
         result1.append(instas[i]);
 
